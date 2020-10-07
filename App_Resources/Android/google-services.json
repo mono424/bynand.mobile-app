@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "70180608753",
+    "firebase_url": "https://repboerse-staging.firebaseio.com",
+    "project_id": "repboerse-staging",
+    "storage_bucket": "repboerse-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70180608753:android:c6ba6e0fb605f1b5426750",
+        "android_client_info": {
+          "package_name": "com.bynand.bynandapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70180608753-t7qjjt6s41h0aenap5thcsd515odpbrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqq2e9TSeci8kCp9Oyi5OVZv1yT1uUoHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70180608753-t7qjjt6s41h0aenap5thcsd515odpbrh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "70180608753-ios4pk8di5hc6d1ec89im5fs06rh2dnn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bynand.bynandapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
