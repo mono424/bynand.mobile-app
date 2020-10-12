@@ -1,9 +1,5 @@
 <template>
-  <!-- Verify Email -->
-  <VerifyEmail v-if="verifyEmailPageVisible" :user="currentUser" />
-
-  <!-- Login Overview -->
-  <Page v-else actionBarHidden="true">
+  <Page actionBarHidden="true">
     <DockLayout stretchLastChild="true" backgroundColor="#072c3d">
       <StackLayout class="login-wrap" verticalAlignment="bottom" height="35%" dock="bottom">
         <TextButton text="Anmelden" :tap="navigateToEmailLogin" />
@@ -21,7 +17,7 @@
 
 <script>
 import { firebase } from '@nativescript/firebase'
-import EmailLogin from '../pages/EmailLogin'
+import EmailLogin from './slides/Email'
 import { LoadingIndicator } from "@nstudio/nativescript-loading-indicator";
 import TextButton from './TextButton'
 

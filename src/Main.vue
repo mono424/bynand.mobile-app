@@ -1,24 +1,15 @@
 <template>
   <Page class="page" actionBarHidden="true" backgroundSpanUnderStatusBar="true">
-    <!-- Loader -->
-    <!-- <ActivityIndicator v-if="initialLoading" busy="true" width="100" height="100"></ActivityIndicator> -->
-
-    <!-- App -->
-    <App v-if="hasAuth" />
-
-    <!-- Login & Registration -->
-    <Login v-else />
+    
   </Page>
 </template>
 
 <script>
 import Vue from 'nativescript-vue'
 import { firebase } from '@nativescript/firebase'
-import App from './App/index'
-import Login from '../components/Login'
 
 export default {
-  name: "Wrapper",
+  name: "Main",
 
   data() {
     return {
@@ -29,11 +20,6 @@ export default {
 
   mounted() {
     this.setup();
-  },
-
-  components: {
-    App,
-    Login
   },
 
   methods: {

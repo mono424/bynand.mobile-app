@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import AppPageDashboard from './Slides/Dashboard/index'
+  import AppPageDashboard from './slides/Dashboard'
   import NavButton from '../../components/NavButton'
   export default {
     data() {

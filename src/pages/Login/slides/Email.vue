@@ -15,7 +15,7 @@
 
 <script>
 import { firebase } from '@nativescript/firebase'
-import TextButton from '../components/TextButton'
+import TextButton from '../../../components/TextButton'
 
 export default {
   name: "EmailLogin",

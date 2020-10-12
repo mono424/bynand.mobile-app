@@ -1,6 +1,8 @@
 import Vue from 'nativescript-vue'
 import VueDevtools from 'nativescript-vue-devtools'
-import Wrapper from './pages/Wrapper'
+
+import Main from './Main'
+import router from './router'
 
 if(TNS_ENV !== 'production') {
   Vue.use(VueDevtools)
@@ -17,5 +19,6 @@ Vue.registerElement(
 
 new Vue({
   store,
-  render: h => h('frame', [h(Wrapper)])
+  router
+  render: h => h('frame', [h(Main)])
 }).$start()
