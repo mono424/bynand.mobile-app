@@ -1,7 +1,5 @@
 <template>
-  <Page class="page" actionBarHidden="true" backgroundSpanUnderStatusBar="true">
-    
-  </Page>
+  <Navigator :defaultRoute="isLoggedIn ? '/home' : '/login'"/>
 </template>
 
 <script>
@@ -14,7 +12,7 @@ export default {
   data() {
     return {
       initialLoading: true,
-      hasAuth: false
+      isLoggedIn: false
     }
   },
 
@@ -30,9 +28,15 @@ export default {
     },
 
     onAuthChange({ loggedIn, user }) {
-      console.log({user});
-      this.hasAuth = loggedIn;
+      this.isLoggedIn = loggedIn;
       this.initialLoading = false;
+
+      if (!this.$navigator.route.meta.needsAuth && this.isLoggedIn) {
+        this.$navigator.navigate('/app', { transition: "slideUp", clearHistory: true });
+      } 
+      if (this.$navigator.route.meta.needsAuth && !this.isLoggedIn) {
+        this.$navigator.navigate('/login', { transition: "slideUp", clearHistory: true });
+      }
     },
 
     initFirebase() {

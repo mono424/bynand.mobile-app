@@ -17,9 +17,8 @@
 
 <script>
 import { firebase } from '@nativescript/firebase'
-import EmailLogin from './slides/Email'
 import { LoadingIndicator } from "@nstudio/nativescript-loading-indicator";
-import TextButton from './TextButton'
+import TextButton from '@/components/TextButton'
 
 export default {
   name: "Login",
@@ -58,12 +57,11 @@ export default {
   methods: {
 
     navigateToEmailLogin() {
-      this.$navigateTo(EmailLogin, { transition: "slideLeft" });
+      this.$navigator.navigate('/login/email', { transition: "slideLeft" });
     },
 
     navigateToRegister() {
       alert("Registrieren ist momentan deaktiviert.");
-      // this.$navigateTo(Register, { transition: "slideRight" });
     },
 
     loginByGoogle() {
