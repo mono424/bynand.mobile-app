@@ -1,0 +1,2 @@
+export const AUTH_CHANGE = "AUTH_CHANGE";
+export const UPDATE_AUTH_USER = "UPDATE_AUTH_USER";

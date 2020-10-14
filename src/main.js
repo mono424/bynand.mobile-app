@@ -4,8 +4,10 @@ import Navigator from 'nativescript-vue-navigator'
 
 import App from './App'
 
-import store from './store'
+import store from './vuex/store'
 import { routes } from './routes/index'
+
+import AuthService from './services/auth'
 
 Vue.use(Navigator, { routes })
 
@@ -20,6 +22,10 @@ Vue.registerElement(
   'CardView',
   () => require('@nstudio/nativescript-cardview').CardView
 );
+
+AuthService.init();
+
+Vue.prototype.$auth = AuthService;
 
 new Vue({
   store,

@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { firebase } from '@nativescript/firebase'
 import TextButton from '../../components/TextButton'
 
 export default {
@@ -37,13 +36,7 @@ export default {
 
     login() {
       this.loading = true;
-      firebase.login({
-        type: firebase.LoginType.PASSWORD,
-        passwordOptions: {
-          email: this.email,
-          password: this.password
-        }
-      })
+      this.$auth.login(this.email, this.password)
       .catch(err => {
         this.error = err;
         this.loading = false;

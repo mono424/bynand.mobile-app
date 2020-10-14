@@ -5,12 +5,11 @@
 </template>
 
 <script>
-import { firebase } from '@nativescript/firebase'
 export default {
    name: "DashboardSlide",
    methods: {
       logout() {
-         firebase.logout();
+         this.$auth.logout();
       }
    }
 }
